@@ -1,6 +1,7 @@
-package com.example.examplemod.platform;
+package tfar.tablistvanish.platform;
 
-import com.example.examplemod.platform.services.IPlatformHelper;
+import net.minecraft.server.level.ServerPlayer;
+import tfar.tablistvanish.platform.services.IPlatformHelper;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class FabricPlatformHelper implements IPlatformHelper {
@@ -20,5 +21,10 @@ public class FabricPlatformHelper implements IPlatformHelper {
     public boolean isDevelopmentEnvironment() {
 
         return FabricLoader.getInstance().isDevelopmentEnvironment();
+    }
+
+    @Override
+    public void refreshTabListName(ServerPlayer player) {
+
     }
 }

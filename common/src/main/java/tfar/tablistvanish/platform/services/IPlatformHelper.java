@@ -1,4 +1,7 @@
-package com.example.examplemod.platform.services;
+package tfar.tablistvanish.platform.services;
+
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
 
 public interface IPlatformHelper {
 
@@ -33,4 +36,6 @@ public interface IPlatformHelper {
 
         return isDevelopmentEnvironment() ? "development" : "production";
     }
+
+    void refreshTabListName(ServerPlayer player);
 }
